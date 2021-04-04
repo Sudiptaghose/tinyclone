@@ -1,0 +1,6 @@
+<h1>Url Shortner</h1>
+<%= render "url_form" %>
+<div>
+<p> Long url: <%= @long_url.url%> </p>
+<p> Short Url: <%= link_to "#{url_for(action: 'home', only_path: false)}#{@long_url.token}", "#{url_for(action: 'home', only_path: false)}#{@long_url.token}" %>
+</div>

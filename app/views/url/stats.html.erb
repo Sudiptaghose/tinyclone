@@ -1,0 +1,8 @@
+<h1>URL Stats</h1>
+
+<div>
+  <p> Long url: <%= @long_url.url%> </p>
+  <p> Short Url: <%= link_to "#{url_for(action: 'home', only_path: false)}#{@long_url.token}", "#{url_for(action: 'home', only_path: false)}#{@long_url.token}" %>
+  <p> Hit count: <%= @long_url.url_hits.count %></p>
+  <p> Last hit from: <%= @last_hit.ip_address%> on <%= @last_hit.created_at%></p>
+</div>
